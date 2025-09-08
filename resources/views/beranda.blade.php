@@ -7,7 +7,7 @@
                 <div class="card bg-primary text-white mb-4">
                     <div class="card-body fs-3">RAK 7</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="/lokasi">Selengkapnya</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -16,7 +16,7 @@
                 <div class="card bg-warning text-white mb-4">
                     <div class="card-body fs-3">BUKU 12</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="/buku">Selengkapnya</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                 <div class="card bg-success text-white mb-4">
                     <div class="card-body fs-3">KATEGORI 4</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                 <div class="card bg-danger text-white mb-4">
                     <div class="card-body fs-3">PENGUNJUNG 168</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -53,73 +53,18 @@
       <th scope="col">Pengarang</th>
       <th scope="col">Penerbit</th>
       <th scope="col">Tahun Terbit</th>
-      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
+    @foreach ($buku as $item )
     <tr>
-        <th scope="row">1</th>
-        <td>Negeri 5 Menara</td>
-        <td>A. Fuadi</td>
-        <td>Gramedia</td>
-        <td>2009</td>
-        <td><button type="button" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
+        <th scope="row">{{ $item -> id }}</th>
+        <td>{{ $item ->judul_buku }}</td>
+        <td>{{$item -> pengarang }}</td>
+        <td>{{ $item -> penerbit }}</td>
+        <td>{{ $item -> tahun_terbit }}</td>
     </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Hamlet</td>
-        <td>William Shakespeare</td>
-        <td>Penguin</td>
-        <td>1968</td>
-        <td><button type="button" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
-    </tr>
-    <tr>
-        <th scope="row">3</th>
-        <td>Aenias</td>
-        <td>Vergilius Publius Maro</td>
-        <td>Penguin</td>
-        <td>1894</td>
-        <td><button type="button" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
-    </tr>
-    <tr>
-        <th scope="row">4</th>
-        <td>Inferno</td>
-        <td>Dante Alighieri</td>
-        <td>Penguin</td>
-        <td>1932</td>
-        <td><button type="button" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
-    </tr>
-    <tr>
-        <th scope="row">5</th>
-        <td>Purgatorio</td>
-        <td>Dante Alighieri</td>
-        <td>Penguin</td>
-        <td>1954</td>
-        <td><button type="button" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
-    </tr>
-    <tr>
-        <th scope="row">6</th>
-        <td>Paradiso</td>
-        <td>Dante Alighieri</td>
-        <td>Penguin</td>
-        <td>1997</td>
-        <td><button type="button" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
-    </tr>
-    <tr>
-        <th scope="row">7</th>
-        <td>Hakuchuumu No Aojashin</td>
-        <td>Ono Wasabi</td>
-        <td>Laplacian</td>
-        <td>2019</td>
-        <td><button type="button" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
-    </tr>
+    @endforeach
   </tbody>
 </table>
 </div>

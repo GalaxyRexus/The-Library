@@ -6,9 +6,9 @@ use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\BukuController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('beranda');
-});
+Route::get('/', [MasterController::class, 'beranda']);
+
+
 Route::get('/lokasi', [LokasiController::class, 'index']);
 Route::get('/lokasi/tambah', [LokasiController::class, 'create']);
 Route::get('/lokasi/delete/{id}', [LokasiController::class, 'destroy']);

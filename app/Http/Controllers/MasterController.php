@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\buku;
 
 class MasterController extends Controller
 {
-    public function buku(){
-        return view("buku");
+    public function beranda(){
+        $buku = buku::all();   
+        return view("beranda", ['buku' => $buku]);
     }
 }
