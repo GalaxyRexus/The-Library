@@ -1,7 +1,7 @@
 @extends('master')
 @section('isi')
      <div class="container"></div>
-    <h3>Ini Adalah Halaman Lokasi Rak</h3>
+    <h3>Ini Adalah Halaman Buku</h3>
     <div class="card">
   <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
     <span>Tabel Lokasi Rak</span>

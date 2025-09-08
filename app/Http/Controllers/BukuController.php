@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Buku;
+use App\Models\Lokasi;
 
 class BukuController extends Controller
 {
@@ -21,8 +22,8 @@ class BukuController extends Controller
      */
     public function create()
     {
-        return view("buku.tambah");
-
+        $lokasi=Lokasi::all();
+        return view("buku.tambah", ['lokasi' => $lokasi]);
     }
 
     /**
@@ -34,7 +35,8 @@ class BukuController extends Controller
             'judul_buku' => $request -> judul_buku,
             'pengarang' => $request -> pengarang,
             'penerbit' => $request -> penerbit,
-            'tahun_terbit' => $request -> tahun_terbit
+            'tahun_terbit' => $request -> tahun_terbit,
+            'id_lokasi' => $request -> id_lokasi
         ]);
         return redirect('/buku');
     }
@@ -67,6 +69,7 @@ class BukuController extends Controller
         $buku ->pengarang = $request->pengarang;
         $buku ->penerbit = $request->penerbit;
         $buku ->tahun_terbit = $request->tahun_terbit;
+        $buku ->id_lokasi = $request->id_lokasi;    
         $buku ->save();
         return redirect('/buku');
     }

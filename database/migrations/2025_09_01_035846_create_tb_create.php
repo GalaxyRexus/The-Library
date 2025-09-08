@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('pengarang');
             $table->string('penerbit');
             $table->integer('tahun_terbit');
+            $table->integer('id_lokasi')->nullable();
         });
     }
 

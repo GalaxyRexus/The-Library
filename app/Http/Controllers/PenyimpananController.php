@@ -12,6 +12,6 @@ class PenyimpananController extends Controller
         // Pakai eager loading biar hemat query
         $buku = Buku::with('lokasi')->get();
 
-        return view('buku.index', compact('buku'));
+        return view('penyimpanan.index', compact('index'));
     }
 }

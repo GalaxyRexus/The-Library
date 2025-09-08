@@ -27,7 +27,7 @@
         <td>{{ $item -> pengarang }}</td>
         <td>{{ $item -> penerbit }}</td>
         <td>{{ $item -> tahun_terbit }}</td>
-        <td> </td>
+        <td>lok </td>
     </tr>
     @endforeach
   </tbody>

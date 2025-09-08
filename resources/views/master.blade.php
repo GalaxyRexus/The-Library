@@ -57,7 +57,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Buku
                             </a>
-                            <a class="nav-link" href="/buku">
+                            <a class="nav-link" href="/penyimpanan">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-database"></i></div>
                                 Penyimpanan
                             </a>

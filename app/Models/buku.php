@@ -8,5 +8,5 @@ class buku extends Model
 {
     protected $table = "tb_buku";
     public $timestamps = false;
-    protected $fillable = ['judul_buku', 'pengarang', 'penerbit', 'tahun_terbit'];
+    protected $fillable = ['judul_buku', 'pengarang', 'penerbit', 'tahun_terbit','id_lokasi'];
 }
