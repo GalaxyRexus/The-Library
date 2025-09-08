@@ -57,7 +57,12 @@ class LokasiController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $lokasi = Lokasi::findOrFail($id);
+        //Update Data
+        $lokasi ->lokasi_rak = $request->lokasi_rak;
+        $lokasi ->deskripsi = $request->deskripsi;
+        $lokasi ->save();
+        return redirect('/lokasi');
     }
 
     /**

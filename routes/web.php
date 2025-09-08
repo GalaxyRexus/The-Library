@@ -14,6 +14,7 @@ Route::get('/lokasi/tambah', [LokasiController::class, 'create']);
 Route::post('/lokasi/store', [LokasiController::class, 'store']);
 Route::get('/lokasi/delete/{id}', [LokasiController::class, 'destroy']);
 Route::get('/lokasi/edit/{id}', [LokasiController::class, 'edit']);
+Route::post('/lokasi/update/{id}', [LokasiController::class, 'update']);
 
 Route::get('/buku', [BukuController::class, 'index']);
 Route::get('/buku/tambah', [BukuController::class, 'create']);

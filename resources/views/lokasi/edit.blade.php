@@ -7,7 +7,7 @@
     <span>Form Edit Lokasi Rak</span>
   </div>
   <div class="card-body">
-    <form method="POST" action="/lokasi/edit">
+    <form method="POST" action="/lokasi/update/{{ $lokasi->id }}">
       @csrf
       <div class="mb-3">
         <label for="kode_buku" class="form-label">Nama Lokasi</label>
