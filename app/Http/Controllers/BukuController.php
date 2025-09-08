@@ -30,7 +30,13 @@ class BukuController extends Controller
      */
     public function store(Request $request)
     {
-        
+        buku::create([
+            'judul_buku' => $request -> judul_buku,
+            'pengarang' => $request -> pengarang,
+            'penerbit' => $request -> penerbit,
+            'tahun_terbit' => $request -> tahun_terbit
+        ]);
+        return redirect('/buku');
     }
 
     /**
@@ -46,7 +52,8 @@ class BukuController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $buku = Buku::where('id', $id)->firstOrFail();
+        return view("buku.edit", compact('buku'));
     }
 
     /**
@@ -54,7 +61,14 @@ class BukuController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $buku = Buku::findOrFail($id);
+        //Update Data
+        $buku ->judul_buku = $request->judul_buku;
+        $buku ->pengarang = $request->pengarang;
+        $buku ->penerbit = $request->penerbit;
+        $buku ->tahun_terbit = $request->tahun_terbit;
+        $buku ->save();
+        return redirect('/buku');
     }
 
     /**

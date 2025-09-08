@@ -6,7 +6,7 @@
     <span>Form Tambah Buku</span>
   </div>
   <div class="card-body">
-    <form action="/lokasi/simpan" method="POST">
+    <form action="/buku/store" method="POST">
       @csrf
       <div class="mb-3">
         <label for="kode_buku" class="form-label">Judul Buku</label>

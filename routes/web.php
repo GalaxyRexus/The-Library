@@ -4,6 +4,7 @@ use App\Http\Controllers\MasterController;
 //Memanggil Controller
 use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\PenyimpananController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MasterController::class, 'beranda']);
@@ -18,4 +19,10 @@ Route::post('/lokasi/update/{id}', [LokasiController::class, 'update']);
 
 Route::get('/buku', [BukuController::class, 'index']);
 Route::get('/buku/tambah', [BukuController::class, 'create']);
+Route::post('/buku/store', [BukuController::class,'store']);
 Route::get('/buku/delete/{id}', [BukuController::class, 'destroy']);
+Route::get('/buku/edit/{id}', [BukuController::class, 'edit']);
+Route::post('/buku/update/{id}', [BukuController::class, 'update']); 
+
+//Routing Halaman Penyimpnanan Buku
+Route::get('/penyimpanan', [PenyimpananController::class, 'index']);
