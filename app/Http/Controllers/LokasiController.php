@@ -27,7 +27,12 @@ class LokasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Simpan Ke Database
+        Lokasi::create([
+            'lokasi_rak' => $request->lokasi_rak,
+            'deskripsi' => $request->deskripsi,
+        ]);
+        return redirect('/lokasi');
     }
 
     /**
@@ -43,7 +48,8 @@ class LokasiController extends Controller
      */
     public function edit(string $id)
     {
-        //
+       $lokasi = Lokasi::where('id', $id)->firstOrFail();
+         return view("lokasi.edit", compact('lokasi'));
     }
 
     /**

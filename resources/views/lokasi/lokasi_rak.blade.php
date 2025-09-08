@@ -20,10 +20,10 @@
   <tbody>
     @foreach ($lokasi as $item)
     <tr>
-      <th scope="row">{{ $item -> id }}</th>
+      <th scope="row">{{ $loop -> iteration}}</th>
       <td>{{ $item -> lokasi_rak }}</td>
       <td>{{ $item -> deskripsi }}</td>
-      <td><a type="button" class="btn btn-warning">Edit</a>
+      <td><a type="button" href="/lokasi/edit/{{ $item -> id }}" class="btn btn-warning">Edit</a>
       <a href="/lokasi/delete/{{ $item -> id }}" type="button" class="btn btn-danger"
       onclick="return confirm('Yakin Ingin Menghapus Data Ini ?')">Delete</a>
     </td>

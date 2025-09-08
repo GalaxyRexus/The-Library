@@ -58,7 +58,7 @@
   <tbody>
     @foreach ($buku as $item )
     <tr>
-        <th scope="row">{{ $item -> id }}</th>
+        <th scope="row">{{ $loop -> iteration }}</th>
         <td>{{ $item ->judul_buku }}</td>
         <td>{{$item -> pengarang }}</td>
         <td>{{ $item -> penerbit }}</td>
