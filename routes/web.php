@@ -5,9 +5,10 @@ use App\Http\Controllers\MasterController;
 use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\PenyimpananController;
+use App\Http\Controllers\BerandaController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [MasterController::class, 'beranda']);
+Route::get('/', [BerandaController::class, 'index']);
 
 
 Route::get('/lokasi', [LokasiController::class, 'index']);

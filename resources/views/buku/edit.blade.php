@@ -25,8 +25,17 @@
         <label for="nama_buku" class="form-label">Tahun Terbit</label>
         <input type="number" class="form-control" name="tahun_terbit" id="tahun_terbit" rows="3" required value="{{ old('tahun_terbit', $buku->tahun_terbit) }}"></input>
       </div>
+      <div class="mb-3">
+        <label for="id_lokasi" class="form-label">Lokasi Rak</label>
+        <select class="form-control form-control-sm w-25" id="id_lokasi" name="id_lokasi" required>
+          <option value="">--Pilih Lokasi Rak--</option>
+          @foreach ($lokasi as $item)
+          <option value="{{ $item->id }}" {{ $buku->id_lokasi == $item->id ? 'selected' : '' }}>{{ $item->lokasi_rak }}</option>
+          @endforeach
+        </select>
+      </div>
       <button type="submit" class="btn btn-success">Simpan</button>
-      <a href="/lokasi" class="btn btn-secondary">Kembali</a>
+     <a href="{{ url()->previous() }}" class="btn btn-secondary">Kembali</a>
     </form>
   </div>
     </div>

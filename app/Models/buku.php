@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Lokasi;
 
-class buku extends Model
+class Buku extends Model
 {
     protected $table = "tb_buku";
     public $timestamps = false;
@@ -13,6 +13,6 @@ class buku extends Model
 
     public function lokasi()
     {
-        return $this->belongsTo(Lokasi::class, 'id');
+        return $this->belongsTo(Lokasi::class, 'id_lokasi', 'id');
     }
 }

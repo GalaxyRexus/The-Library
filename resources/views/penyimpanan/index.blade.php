@@ -28,7 +28,7 @@
         <td>{{ $item -> pengarang }}</td>
         <td>{{ $item -> penerbit }}</td>
         <td>{{ $item -> tahun_terbit }}</td>
-        <td>{{ $item->lokasiBuku}}</td>
+        <td>{{ $item-> id_lokasi ? 'Sudah Tersimpan': 'Belom'}}</td>
         
         <td> <td><a type="button" href="/buku/edit/{{ $item -> id }}" class="btn btn-warning">Edit</a>
             <a href="/buku/delete/{{ $item -> id }}" type="button" class="btn btn-danger"

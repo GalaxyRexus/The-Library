@@ -62,8 +62,9 @@ class BukuController extends Controller
      */
     public function edit(string $id)
     {
+        $lokasi=Lokasi::all();
         $buku = Buku::where('id', $id)->firstOrFail();
-        return view("buku.edit", compact('buku'));
+        return view("buku.edit", compact('buku', 'lokasi'));
     }
 
     /**

@@ -26,7 +26,7 @@
       </div>
       <div class="mb-3">
         <label for="id_lokasi" class="form-label">Lokasi Rak</label>
-        <select class="form-control form-control-sm w-25" id="id_lokasi" name="id_lokasi" required>
+        <select class="form-control form-control-sm w-25" id="id_lokasi" name="id_lokasi">
           <option value="">--Pilih Lokasi Rak--</option>
           @foreach ($lokasi as $item)
           <option value="{{ $item->id }}">{{ $item->lokasi_rak }}</option>
