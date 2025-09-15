@@ -29,7 +29,7 @@
         <td>{{ $item -> tahun_terbit }}</td>
         <td><a type="button" href="/buku/edit/{{ $item -> id }}" class="btn btn-warning">Edit</a>
             <a href="/buku/delete/{{ $item -> id }}" type="button" class="btn btn-danger"
-            onclick="return confirm ('Yakin Ingin Delete Data Ini ??')">Delete</a>
+            onclick="return confirm ('Yakin Ingin Delete Data Ini ??')">Delete</a> </td>
     </tr>
     @endforeach
   </tbody>

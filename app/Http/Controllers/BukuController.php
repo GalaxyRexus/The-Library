@@ -14,6 +14,14 @@ class BukuController extends Controller
     public function index()
     {
         $buku = Buku::all();   
+        $buku->transform(function ($item){
+           if($item->lokasi){
+                $lokasi=$item->lokasi->lokasi;
+           }else{$lokasi="Belum Disimpan";
+        }
+        $item->lokasiBuku=$lokasi;
+        return $item;
+        });
         return view("buku.buku", ['buku' => $buku]);
     }
 
